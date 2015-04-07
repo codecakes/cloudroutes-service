@@ -3,7 +3,7 @@
 
 echo "[BOOTSTRAP] Exporting /code/common to PYTHONPATH"
 echo "-------------------------------------------------"
-export PYTHONPATH=$PYTHONPATH:/code/common
+export PYTHONPATH="$PYTHONPATH:/code/common"
 
 echo "Bootstrapping Application Environmental"
 echo "[BOOTSTRAP] Dumping Docker Environment:"
