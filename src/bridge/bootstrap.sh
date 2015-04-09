@@ -18,6 +18,8 @@ sed -i "s/sink_host$/$ACTIONBROKER_PORT_6001_TCP_ADDR/" /config/config.yml
 sed -i "s/6001/$ACTIONBROKER_PORT_6001_TCP_PORT/" /config/config.yml
 
 echo "[BOOTSTRAP] Installing Cloudroutes Common Package Support"
+echo $(readlink -f /code/common)
+echo $(readlink -f common)
 python /code/add2pth.py
 echo "-------------------------------------------------"
 
