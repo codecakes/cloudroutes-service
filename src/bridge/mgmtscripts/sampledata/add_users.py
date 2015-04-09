@@ -7,7 +7,7 @@ import rethinkdb as r
 
 from rethinkdb.errors import RqlRuntimeError, RqlDriverError
 
-from runbookdb import RunbookDB
+from cloudroutes_common_pkg.runbookdb import RunbookDB
 
 if len(sys.argv) != 2:
     print("Hey, thats not how you launch this...")
