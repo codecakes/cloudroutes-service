@@ -6,10 +6,6 @@ echo "[BOOTSTRAP] Dumping Docker Environment:"
 echo "-------------------------------------------------"
 env
 
-echo "[BOOTSTRAP] Installing Cloudroutes Common Package Support"
-pip install -e git+https://github.com/codecakes/cloudroutes_common_pkg.git@master#egg=cloudroutes_common_pkg
-echo "-------------------------------------------------"
-
 echo "[BOOTSTRAP] Generating config file"
 echo "-------------------------------------------------"
 cp /code/config/config.yml.example /config/config.yml
@@ -24,3 +20,7 @@ sed -i "s/6001/$ACTIONBROKER_PORT_6001_TCP_PORT/" /config/config.yml
 echo "[BOOTSTRAP] Starting actioner.py"
 echo "-------------------------------------------------"
 python /code/actioner.py /config/config.yml
+
+echo "[BOOTSTRAP] Installing Cloudroutes Common Package Support"
+python /code/add2pth.py
+echo "-------------------------------------------------"
