@@ -69,3 +69,6 @@ config.yml
 
 # Vagrant directory
 .vagrant/
+
+# Misc
+*.*~
