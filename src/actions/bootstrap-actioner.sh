@@ -22,5 +22,5 @@ echo "-------------------------------------------------"
 python /code/actioner.py /config/config.yml
 
 echo "[BOOTSTRAP] Installing Cloudroutes Common Package Support"
-python /code/add2pth.py
+pip install git+https://github.com/codecakes/cloudroutes_common_pkg.git@master
 echo "-------------------------------------------------"
