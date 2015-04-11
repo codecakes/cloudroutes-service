@@ -18,13 +18,7 @@ sed -i "s/sink_host$/$ACTIONBROKER_PORT_6001_TCP_ADDR/" /config/config.yml
 sed -i "s/6001/$ACTIONBROKER_PORT_6001_TCP_PORT/" /config/config.yml
 
 echo "[BOOTSTRAP] Installing Cloudroutes Common Package Support"
-##echo -n "common"
-#export PYTHONSTARTUP=$PYTHONSTARTUP:/common/add2pth.py
-#echo "PYTHONPATH=$PYTHONPATH:$(readlink -f common)" >> ~/.bashrc
-#python /common/add2pth.py
 pip install git+https://github.com/codecakes/cloudroutes_common_pkg.git@master
-echo $(ls /code)
-echo $(ls /)
 echo "-------------------------------------------------"
 
 if [ -z "$1" ] ; then
