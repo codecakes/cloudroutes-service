@@ -11,7 +11,9 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Install python
-RUN apt-get install -y python python-dev python-pip python-virtualenv wget unzip
+#RUN apt-get install -y python python-dev python-pip python-virtualenv wget unzip
+RUN apt-get install -y python python-dev python-setuptools build-essential wget unzip
+RUN easy_install -U pip
 RUN rm -rf /var/lib/apt/lists/*
 
 # Create working directory
