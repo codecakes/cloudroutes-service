@@ -20,6 +20,7 @@ bridge:
   volumes:
     - src/bridge:code:ro
   links:
+    - redis
     - db
     - actionbroker
 actionbroker:
