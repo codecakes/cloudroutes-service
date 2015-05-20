@@ -303,6 +303,24 @@ def monitors_page():
             tmpl = 'member/mod-subscription.html'
         else:
             pass
+
+        data['monitors'] = user.getMonitors(g.rdb_conn)
+        data['reactions'] = user.getReactions(g.rdb_conn)
+        # If there are no monitors print a welcome message
+        if len(data['monitors']) < 1 and len(data['reactions']) < 1:
+            data['welcome'] = True
+        else:
+            data['welcome'] = False
+
+        if len(data['monitors']) < 1:
+            data['mons'] = False
+        else:
+            data['mons'] = True
+
+        if len(data['reactions']) < 1:
+            data['reacts'] = False
+        else:
+            data['reacts'] = True
         page = render_template(tmpl, data=data)
         return page
     else:
@@ -405,11 +423,11 @@ def checkapi_page(atype, cid, check_key, action):
         webapi = __import__(
             "monitorapis." + atype, globals(), locals(), ['webCheck'], -1)
         replydata = webapi.webCheck(request, monitor, urldata, g.rdb_conn)
-    except:
-        print("/api/%s - webCheck action") % atype
+    except Exception as e:
+        print("/api/%s - webCheck action failed - %s") % (atype, e.message)
         replydata = {
             'headers': {'Content-type': 'application/json'},
-            'data': "{ 'results' : 'fatal error' }"
+            'data': "{ 'results' : 'fatal error'  }"
         }
 
     print("/api/%s - API request") % atype
