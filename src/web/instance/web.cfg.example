@@ -133,3 +133,10 @@ SUBSCRIPTIONS = {
         'interval': 'month'
     }
 }
+DATACENTERS = {
+    'choices' : {
+        ("dc1queue", 'DevZone 1'),
+        ("dc2queue", 'DevZone 2'),
+    }
+}
+
