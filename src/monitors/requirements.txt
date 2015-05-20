@@ -3,5 +3,7 @@ pyzmq==13.1.0
 redis==2.10.3
 requests
 cffi>=0.8
-cryptography==0.5.4
-pyOpenSSL==0.14
+cryptography
+pyOpenSSL
+ndg-httpsclient
+pyasn1

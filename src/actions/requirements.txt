@@ -8,3 +8,6 @@ rethinkdb==1.13.0-3
 pygerduty==0.24
 twilio
 mandrill
+pyOpenSSL
+ndg-httpsclient
+pyasn1

@@ -1,11 +1,11 @@
 Runbook
 ===========
 
-| Facility | Develop | Master |
-| --------- | --------| ------------ |
-| Travis-CI | [![Build Status](https://travis-ci.org/asm-products/cloudroutes-service.svg?branch=develop)](https://travis-ci.org/asm-products/cloudroutes-service) | [![Build Status](https://travis-ci.org/asm-products/cloudroutes-service.svg?branch=master)](https://travis-ci.org/asm-products/cloudroutes-service)
-| Coverage | [![Coverage Status](https://img.shields.io/coveralls/asm-products/cloudroutes-service.svg)](https://coveralls.io/r/asm-products/cloudroutes-service?branch=develop) | N/A |
-| Contribute | <a href="https://assembly.com/runbook/bounties?utm_campaign=assemblage&utm_source=runbook&utm_medium=repo_badge"><img src="https://asm-badger.herokuapp.com/runbook/badges/tasks.svg" height="20px" alt="Open Bounties" /> | N/A |
+| Facility | Develop | Staging | Master |
+| --------- | -------- | -------- | ------------ |
+| Travis-CI | [![Build Status](https://travis-ci.org/asm-products/cloudroutes-service.svg?branch=develop)](https://travis-ci.org/asm-products/cloudroutes-service) | [![Build Status](https://travis-ci.org/asm-products/cloudroutes-service.svg?branch=staging)](https://travis-ci.org/asm-products/cloudroutes-service) | [![Build Status](https://travis-ci.org/asm-products/cloudroutes-service.svg?branch=master)](https://travis-ci.org/asm-products/cloudroutes-service)
+| Coverage | [![Coverage Status](https://img.shields.io/coveralls/asm-products/cloudroutes-service.svg)](https://coveralls.io/r/asm-products/cloudroutes-service?branch=develop) | [![Coverage Status](https://img.shields.io/coveralls/asm-products/cloudroutes-service.svg)](https://coveralls.io/r/asm-products/cloudroutes-service?branch=staging) | [![Coverage Status](https://img.shields.io/coveralls/asm-products/cloudroutes-service.svg)](https://coveralls.io/r/asm-products/cloudroutes-service?branch=master) |
+| Contribute | <a href="https://assembly.com/runbook/bounties?utm_campaign=assemblage&utm_source=runbook&utm_medium=repo_badge"><img src="https://asm-badger.herokuapp.com/runbook/badges/tasks.svg" height="20px" alt="Open Bounties" /> | N/A | N/A |
 
 ## What is Runbook
 
@@ -77,7 +77,7 @@ Runbook is a very fast paced application, we are making major code changes frequ
 
 To synchronize with the upstream repository you must first define it as an upstream source.
 
-    $ git remote add upstream git@github.com:asm-products/cloudroutes-service.git
+    $ git remote add upstream https://github.com/asm-products/cloudroutes-service.git
 
 ##### Fetching and Merging updates
 
