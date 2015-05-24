@@ -1,0 +1,150 @@
+{% include 'base-header.html' %}
+
+<!-- HERO HEADER SECTION -->
+<div class="hero-section">
+  <div class="container">
+    <h1 class="hero-vp">
+      DevOps, automated
+    </h1>
+    <h2 class="hero-explain">
+      Solve problems in your sleep with IFTTT-style mitigation of alerts
+    </h2>
+
+    <a href="https://dash.runbook.io/signup" class="btn btn-action hero-call-to-action">Sign up for free</a>
+   </div>
+</div>
+<!-- end HERO HEADER SECTION -->
+
+<!-- EXPLAIN SECTION -->
+<div class="section explain-section">
+  <div class="container">
+
+    <a name="features"></a>
+    <h2 class="subtitle">It's simple as one, two</h2>
+
+    <div class="sub-section left">
+
+      <img src="static/img/monitor-diagram.png" alt="Monitors"/>
+      <div class="description">
+        <h3>Monitors</h3>
+        <p>
+          Monitors are used to check the status of your environment. They can be webhooks that call to the <strong>Runbook</strong> RESTful API, they can be Datadog alerts, they can be ping requests. Or, you can setup our TCP custom port to validate connectivity.
+        </p>
+        <div class="more">
+          <a href="/pages/monitors">See the full list of available Monitors</a>
+          <a href="https://dash.runbook.io/signup" class="btn btn-action">Sign Up</a>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+    </div>
+
+    <hr/>
+
+    <div class="sub-section right">
+
+      <div class="description">
+        <h3>Reactions</h3>
+        <p>
+          Reactions are automated tasks that are called when Monitors fail. It can be anything from starting or restarting servers on AWS, Digital Ocean, or elsewhere, to running a custom script or executing a command. You know, all the first things you try when you get a 4am wake-up call.
+        </p>
+        <div class="more">
+          <a href="/pages/reactions">See the full list of available Reactions</a>
+          <a href="https://dash.runbook.io/signup" class="btn btn-action">Sign Up</a>
+        </div>
+      </div>
+      <img src="static/img/reaction-diagram.png" alt="Reactions"/>
+      <div class="clearfix"></div>
+
+     </div>
+
+  </div>
+</div>
+<!-- end EXPLAIN SECTION -->
+
+<!-- DIAGRAM SECTION -->
+<div class="section diagram-section">
+  <div class="container">
+    
+    <h2 class="subtitle">Integrated with the tools you use today</h2>
+
+    <img src="static/img/integration-partners.png" class="diagram" width="100%"/>
+
+    <h3 class="diagram-subtitle">We support the systems above and <a href="/pages/reactions">many more</a>.</h3>
+
+  </div>
+</div>
+<!-- end DIAGRAM SECTION -->
+
+<!-- QUOTE SECTION -->
+<div class="section quote-section">
+  <div class="container">
+
+    <h2 class="subtitle">Don't take our word for it</h2>
+
+    <!-- quote 1 -->
+    <div class="quote-block">
+
+      <div class="quote-block-info">
+        <div class="author-thumb">
+          <img src="static/img/quote-authors/chris.png" width="100%"/>
+        </div>
+
+        <div class="quote-info">
+          <p class="quote-text">
+            "Runbook makes reacting to system issues fast and predictable. Without requiring manual intervention."
+          </p>
+          <span class="quote-divisor"></span>
+          <h3 class="quote-author">Chris Boothe</h3>
+          <h4 class="quote-position">Founder, Domain Ensure</h4>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+    <!-- end quote 1 -->
+
+    <hr/>
+     
+    <!-- quote 2 -->
+    <div class="quote-block">
+
+      <div class="quote-block-info">
+        <div class="author-thumb">
+          <img src="static/img/quote-authors/gopi.png" width="100%"/>
+        </div>
+
+        <div class="quote-info">
+          <p class="quote-text">
+            "Runbook helped us get to 100% availability for our API, and 0% headaches with their simple integrations to existing services. Their team is absolutely awesome for support and new feature requests."
+          </p>
+          <span class="quote-divisor"></span>
+          <h3 class="quote-author">Gopi Aravind</h3>
+          <h4 class="quote-position">CEO, Unwired Labs</h4>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+    <!-- end quote 2 -->
+
+  </div>
+
+</div>
+<!-- end QUOTE SECTION -->
+
+<!-- FOOTER ACTION SECTION -->
+<div class="footer-action-section">
+  <div class="container">
+
+    <h4>Never again wake up at 4am for a problem that can be solved automatically</h4>
+
+    <a href="https://dash.runbook.io/signup" class="btn btn-action call-to-action">Get Started Now</a>
+
+    <h5>Runbook is <a href="https://assembly.com/runbook?utm_campaign=assemblage&utm_source=runbook&utm_medium=flair_widget&utm_content=light_banner" class="assembly-link">Built with <i class="glyphicon glyphicon-heart"></i> on Assembly</a></h5>
+
+  </div>
+</div>
+<!-- end FOOTER ACTION SECTION -->
+
+{% include 'footer.html' %}

@@ -1,0 +1,41 @@
+<div class="well">
+<p class="lead">Need more monitors? Upgrade your {{ data['acttype'] }} account to a Pro account and you can add additional monitors for only $4.99 per monitor with our monthly subscription plan. You also get the ability to run monitors more frequently.</p>
+<div align="center">
+<form action="/dashboard/mod-subscription" method="post" id="subscribe-form" target="_self" class="form-horizontal" role="form">
+<div class="form-group">
+<div class="input-group">
+  <select class="plan-select" id="plan" name="plan">
+    {% if data['acttype'] == 'Promotional' %}
+    <option value="cloudroutes_cr_yearly_2" selected>Annual Subscription - $9/monitor</option>
+    <option value="cloudroutes_cr_monthly">Monthly Subscription - $1/monitor</option>
+    {% else %}
+    <option value="ec663ba0-c8a9-446a-95b3-0ddbe34d1e85_runbook_4999_yearly" selected>Annual Subscription</option>
+    <option value="ec663ba0-c8a9-446a-95b3-0ddbe34d1e85_runbook_499_monthly">Monthly Subscription</option>
+    {% endif %}
+  </select>
+  <button class="btn btn-primary btn-sm" id="customButton">Upgrade</button>
+</div>
+</div>
+</form>
+<p class="info">Annual subscribers only pay $49.99 per monitor each year, that is 12 months for the price of 10.</p>
+</div>
+</div>
+ <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+<script>
+    $('#customButton').click(function(){
+      var token = function(res){
+        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+        $('form').append($input).submit();
+      };
+
+      StripeCheckout.open({
+        key:         '{{ data['stripe_pubkey'] }}',
+        name:        'Runbook',
+        description: 'Upgrade to Pro',
+        panelLabel:  'Upgrade',
+        token:       token
+      });
+
+      return false;
+    });
+  </script>
